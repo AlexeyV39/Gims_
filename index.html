@@ -2,191 +2,162 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ГИМС Практика PRO</title>
+
 <style>
-body{font-family:Arial;background:#0f172a;color:white;margin:0;padding:15px}
-h1{text-align:center}
-.card{background:#1e293b;border-radius:12px;padding:15px;margin:12px 0}
-button{background:#22c55e;color:white;border:none;padding:14px;border-radius:10px;width:100%;font-size:18px;cursor:pointer}
-#title{font-size:24px;font-weight:bold;margin-bottom:10px}
-#content{white-space:pre-line;line-height:1.7}
-.small{opacity:.8}
+body{
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+    padding:15px;
+}
+
+h1{
+    text-align:center;
+}
+
+.card{
+    background:#1e293b;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+details{
+    margin-top:10px;
+}
+
+summary{
+    cursor:pointer;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.step{
+    margin:8px 0;
+}
+
+.command{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+svg{
+    width:100%;
+    background:white;
+    border-radius:10px;
+    margin-top:10px;
+}
 </style>
 </head>
 <body>
 
-<h1>🚤 ГИМС Практика PRO</h1>
+<h1>🚤 Тренажёр ГИМС Практика</h1>
 
 <div class="card">
-<div id="title">Нажмите "Следующий этап"</div>
-<div id="content">Тренажёр проговаривания действий судоводителя.</div>
+<h2>⚓ Постановка на якорь</h2>
+
+<p class="command">Что говорить:</p>
+
+<div class="step">Готовлю якорь к отдаче.</div>
+<div class="step">Снижаю скорость.</div>
+<div class="step">Перевожу двигатель на нейтраль.</div>
+<div class="step">Отдаю якорь.</div>
+<div class="step">Травлю якорный канат.</div>
+<div class="step">Отдаю не менее трёх глубин.</div>
+<div class="step">Якорь держит.</div>
+<div class="step">Судно стоит на якоре.</div>
+
+<svg viewBox="0 0 400 150">
+<line x1="200" y1="20" x2="200" y2="100" stroke="black" stroke-width="3"/>
+<polygon points="170,20 230,20 200,0" fill="gray"/>
+<text x="120" y="130" fill="black">Судно на якоре</text>
+</svg>
+
 </div>
 
 <div class="card">
-<button onclick="nextStep()">Следующий этап ▶</button>
+<h2>⚓ Снятие с якоря</h2>
+
+<div class="step">Выбираю якорный канат.</div>
+<div class="step">Якорь панер.</div>
+<div class="step">Продолжаю выборку каната.</div>
+<div class="step">Якорь встал.</div>
+<div class="step">Поднимаю якорь на борт.</div>
+<div class="step">Осматриваю якорь.</div>
+<div class="step">Якорь чист.</div>
+<div class="step">Якорь закреплён.</div>
+<div class="step">Продолжаю движение.</div>
+
 </div>
 
-<div class="card small">
-<b>Совет:</b> читайте текст вслух как инспектору на экзамене.
+<div class="card">
+<h2>🚤 Отход от причала</h2>
+
+<div class="step">Осматриваю акваторию.</div>
+<div class="step">Убеждаюсь в безопасности манёвра.</div>
+<div class="step">Отдаю швартовы.</div>
+<div class="step">Включаю задний ход.</div>
+<div class="step">Отхожу от причала.</div>
+<div class="step">Включаю передний ход.</div>
+<div class="step">Продолжаю движение.</div>
+
 </div>
 
-<script>
-const steps=[
-{
-title:"Осмотр судна",
-text:`Приступаю к осмотру судна.
+<div class="card">
+<h2>🧍 Человек за бортом</h2>
 
-Проверяю наличие спасательных жилетов.
-Проверяю наличие огнетушителя.
-Проверяю наличие якоря.
-Проверяю наличие швартовых концов.
-Проверяю наличие конца Александрова.
-Осматриваю корпус на отсутствие повреждений.
-Проверяю наличие топлива.
-Проверяю исправность рулевого управления.
+<div class="command">ЧЕЛОВЕК ЗА БОРТОМ!</div>
 
-Судно к эксплуатации подготовлено.`
-},
-{
-title:"Подготовка к запуску двигателя",
-text:`Надеваю спасательный жилет.
+<div class="step">Не теряю объект из вида.</div>
+<div class="step">Показываю рукой направление.</div>
+<div class="step">Выполняю циркуляцию.</div>
+<div class="step">Подхожу против ветра или течения.</div>
+<div class="step">Снижаю скорость.</div>
+<div class="step">Останавливаюсь рядом.</div>
 
-Проверяю наличие жилетов у всех находящихся на борту.
+</div>
 
-Проверяю нейтральное положение редуктора.
+<div class="card">
+<h2>🛟 Подход к причалу</h2>
 
-Закрепляю страховочную чеку аварийной остановки двигателя.
+<div class="step">Подход под углом около 45°.</div>
+<div class="step">Руль влево.</div>
+<div class="step">Нейтраль.</div>
+<div class="step">Руль вправо до упора.</div>
+<div class="step">Реверс.</div>
+<div class="step">После полной остановки подаю швартов.</div>
+<div class="step">Нейтраль.</div>
+<div class="step">Глушу двигатель.</div>
 
-Запускаю двигатель.
+</div>
 
-Двигатель работает устойчиво.`
-},
-{
-title:"Отход от причала",
-text:`Осматриваю акваторию.
+<div class="card">
+<h2>❓ Вопросы инспектора</h2>
 
-Убеждаюсь в безопасности манёвра.
+<details>
+<summary>На каком расстоянии от пляжных буйков?</summary>
+<p>Не ближе 50 метров.</p>
+</details>
 
-Отдаю швартовые концы.
+<details>
+<summary>Как экстренно заглушить двигатель?</summary>
+<p>Выдернуть страховочную чеку.</p>
+</details>
 
-Включаю задний ход.
+<details>
+<summary>Справа идёт моторная лодка?</summary>
+<p>Уступаю дорогу.</p>
+</details>
 
-Отхожу от причала на безопасное расстояние.
+<details>
+<summary>Курс пересекает гребная лодка?</summary>
+<p>Уступаю дорогу.</p>
+</details>
 
-Включаю передний ход.
-
-Продолжаю движение.`
-},
-{
-title:"Разворот",
-text:`Осматриваю акваторию.
-
-Убеждаюсь в безопасности манёвра.
-
-Выполняю плавный разворот.
-
-Выравниваю судно на новом курсе.
-
-Продолжаю движение.`
-},
-{
-title:"Движение задним ходом",
-text:`Осматриваю акваторию.
-
-Убеждаюсь в безопасности манёвра.
-
-Включаю задний ход.
-
-Контролирую направление движения.
-
-Завершаю манёвр.`
-},
-{
-title:"Человек за бортом",
-text:`ЧЕЛОВЕК ЗА БОРТОМ!
-
-Объект визуально контролирую.
-
-Не теряю объект из вида.
-
-Выполняю циркуляцию.
-
-Подхожу против ветра или течения.
-
-Снижаю скорость.
-
-Останавливаюсь рядом с пострадавшим.`
-},
-{
-title:"Постановка на якорь",
-text:`Снижаю скорость судна.
-
-Перевожу двигатель на нейтраль.
-
-Отдаю якорь.
-
-Травлю якорный канат.
-
-Контролирую удержание судна.
-
-Якорь держит.
-
-Судно стоит на якоре.`
-},
-{
-title:"Снятие с якоря",
-text:`Выбираю якорный канат.
-
-Якорь панер.
-
-Продолжаю выборку каната.
-
-Якорь встал.
-
-Поднимаю якорь на борт.
-
-Осматриваю якорь.
-
-Якорь чист.
-
-Закрепляю якорь.
-
-Продолжаю движение.`
-},
-{
-title:"Подход к причалу",
-text:`Заранее снижаю скорость.
-
-Подхожу к причалу малым ходом.
-
-Контролирую положение судна.
-
-Останавливаю судно.
-
-Подаю швартовый конец.
-
-Швартую судно.
-
-Перевожу двигатель на нейтраль.
-
-Глушу двигатель.
-
-Судно пришвартовано.
-
-Экзаменационное задание выполнено.`
-}
-];
-
-let i=-1;
-
-function nextStep(){
-i++;
-if(i>=steps.length)i=0;
-document.getElementById('title').innerText=steps[i].title;
-document.getElementById('content').innerText=steps[i].text;
-}
-</script>
+</div>
 
 </body>
 </html>
